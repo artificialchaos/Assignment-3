@@ -4,7 +4,8 @@ import java.util.*;
 public class Carnivore 
 {
 	PApplet parent;
-	
+	int cposx = 0;
+	int cposy = 0;
 	public Carnivore(PApplet p)
 	{
 		parent = p;
@@ -16,9 +17,10 @@ public class Carnivore
 	}
 	void drawCarn()
 	{
-	     /*parent.pushMatrix();  
+	     parent.pushMatrix();
+	     parent.translate(cposx, cposy);
 	     parent.fill(255,0,0);
 	     parent.ellipse(40, 40, 40, 40);
-	     parent.popMatrix();*/
+	     parent.popMatrix();
 	}
 }
