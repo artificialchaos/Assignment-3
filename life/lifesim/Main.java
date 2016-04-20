@@ -31,15 +31,25 @@ public class Main extends PApplet
 	public void draw() 
 	{
 		
-		for(int i = 0 ; i <= 10 ; i++)
-		{
-			herbivore.hposx = (int)random(1300);
-			herbivore.hposy = (int)random(800);
-			carnivore.cposx = (int)random(1300);
-			carnivore.cposy = (int)random(800);
-			//bacteria.render();
-			herbivore.drawHerb();
-			carnivore.drawCarn();
-		}
+		if (frameCount % 90 == 0)
+			  {
+				herbivore.hposx = (int)random(1300);
+				herbivore.hposy = (int)random(800);
+				carnivore.cposx = (int)random(1300);
+				carnivore.cposy = (int)random(800);
+				bacteria.render();
+				if(bacteria.herbCount < 100)
+				{
+					herbivore.drawHerb();
+					bacteria.herbCount++;
+				}
+				
+				if(bacteria.carnCount < 100)
+				{
+					carnivore.drawCarn();
+					bacteria.carnCount++;
+				}
+				
+			  }
 	}	
 }

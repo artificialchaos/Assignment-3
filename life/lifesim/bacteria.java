@@ -4,7 +4,8 @@ import java.util.*;
 public class Bacteria 
 {
 	PApplet parent;
-
+	int herbCount = 0;
+	int carnCount = 0;
 	public Bacteria(PApplet p)
 	{
 		parent = p;
