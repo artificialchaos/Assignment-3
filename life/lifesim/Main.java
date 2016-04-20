@@ -13,7 +13,7 @@ public class Main extends PApplet
 		PApplet.main(new String[] { "--present", "Main" });
 
 	}
-	
+
 	Bacteria bacteria;
 	Herbivore herbivore;
 	Carnivore carnivore;
@@ -59,5 +59,28 @@ public class Main extends PApplet
 				
 			  }
 	}
-	
+	public void collisions()
+	{
+		for(int i = objects.size() - 1 ; i >= 0   ;i --)
+		{
+			Object bac1 = objects.get(i);
+			if (bac1 instanceof herbivores)
+		    {
+				for(int j = objects.size() - 1 ; j >= 0   ;j --)
+			    {
+					Object bac2 = objects.get(j);
+					if (bac2 instanceof carnivores) 
+			        {
+						PVector temp = new PVector(0,0);
+				        temp.x = bac2.carnivore.cposx + 15;
+				        temp.y = bac2.carnivore.cposy + 10;
+				        if (bac1.position.dist(temp) < 25)
+				        {
+				          objects.remove(bac1);
+				        }
+			        }
+			    }
+		    }
+		}
+	}
 }
