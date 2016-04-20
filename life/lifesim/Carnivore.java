@@ -15,12 +15,13 @@ public class Carnivore
 	
 
 	}
-	void drawCarn()
+	void drawCarn( int p ,int q )
 	{
 	     parent.pushMatrix();
-	     parent.translate(cposx, cposy);
+	     parent.translate(p, q);
 	     parent.fill(255,0,0);
 	     parent.ellipse(40, 40, 40, 40);
 	     parent.popMatrix();
+	     p = p + 1;
 	}
 }

@@ -42,13 +42,16 @@ public class Main extends PApplet
 					Herbivore herb = null;
 					herb = new Herbivore(this);
 					herbivores.add(herb);
-					herbivore.drawHerb();
+					herbivore.drawHerb(herbivore.hposx, herbivore.hposy);
 					bacteria.herbCount++;
 				}
 				
 				if(bacteria.carnCount < 100)
 				{
-					carnivore.drawCarn();
+					Carnivore carn = null;
+					carn = new Carnivore(this);
+					carnivores.add(carn);
+					carnivore.drawCarn(carnivore.cposx, carnivore.cposy);
 					bacteria.carnCount++;
 				}
 				

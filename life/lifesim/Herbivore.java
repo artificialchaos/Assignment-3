@@ -15,13 +15,15 @@ public class Herbivore
 		
 
 	}
-	public void drawHerb()
+	public void drawHerb( int x, int y)
 	{
-	     parent.pushMatrix(); 
-	     parent.translate(hposx, hposy);
+		 
+		 parent.pushMatrix(); 
+	     parent.translate(x, y);
 	     parent.fill(0,255,0);
 	     parent.ellipse(40, 40, 40, 40);
 	     parent.popMatrix();
+	     x = x + 1;
 	}
 
 
