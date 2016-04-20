@@ -10,8 +10,15 @@ public class Herbivore
 		parent = p;
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
+	}
+	void drawHerb()
+	{
+	     parent.pushMatrix(); 
+	     parent.fill(0,255,0);
+	     parent.ellipse(40, 40, 40, 40);
+	     parent.popMatrix();
 	}
 
 }

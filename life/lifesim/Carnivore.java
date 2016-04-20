@@ -9,8 +9,16 @@ public class Carnivore
 	{
 		parent = p;
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) 
+	{
+	
 
+	}
+	void drawCarn()
+	{
+	     /*parent.pushMatrix();  
+	     parent.fill(255,0,0);
+	     parent.ellipse(40, 40, 40, 40);
+	     parent.popMatrix();*/
 	}
 }
