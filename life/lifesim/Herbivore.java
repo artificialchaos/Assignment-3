@@ -23,7 +23,7 @@ public class Herbivore
 	     parent.fill(0,255,0);
 	     parent.ellipse(40, 40, 40, 40);
 	     parent.popMatrix();
-	     x = x + 1;
+	     
 	}
 
 

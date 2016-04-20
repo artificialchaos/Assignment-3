@@ -5,8 +5,8 @@ import java.util.*;
 import lifesim.Object;
 public class Main extends PApplet
 {
-	ArrayList<Herbivore> herbivores = new ArrayList<Herbivore>();
-	ArrayList<Carnivore> carnivores = new ArrayList<Carnivore>();
+	ArrayList<Object> herbivores = new ArrayList<Object>();
+	ArrayList<Object> carnivores = new ArrayList<Object>();
 	ArrayList<Object> objects = new ArrayList<Object>();
 	public static void main(String[] args) 
 	{
@@ -17,6 +17,7 @@ public class Main extends PApplet
 	Bacteria bacteria;
 	Herbivore herbivore;
 	Carnivore carnivore;
+	Object object;
 	public void setup()
 	{
 	  size(1300, 800);
@@ -25,6 +26,7 @@ public class Main extends PApplet
 	  bacteria = new Bacteria(this);
 	  herbivore = new Herbivore(this);
 	  carnivore = new Carnivore(this);
+	  object = new Object(this);
 	}
 	
 	public void draw() 
@@ -39,22 +41,23 @@ public class Main extends PApplet
 				bacteria.render();
 				if(bacteria.herbCount < 100)
 				{
-					Herbivore herb = null;
-					herb = new Herbivore(this);
+					Object herb = null;
 					herbivores.add(herb);
+					objects.add(herb);
 					herbivore.drawHerb(herbivore.hposx, herbivore.hposy);
 					bacteria.herbCount++;
 				}
 				
 				if(bacteria.carnCount < 100)
 				{
-					Carnivore carn = null;
-					carn = new Carnivore(this);
+					Object carn = null;
 					carnivores.add(carn);
+					objects.add(carn);
 					carnivore.drawCarn(carnivore.cposx, carnivore.cposy);
 					bacteria.carnCount++;
 				}
 				
 			  }
-	}	
+	}
+	
 }

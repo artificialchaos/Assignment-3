@@ -22,6 +22,6 @@ public class Carnivore
 	     parent.fill(255,0,0);
 	     parent.ellipse(40, 40, 40, 40);
 	     parent.popMatrix();
-	     p = p + 1;
+	
 	}
 }
