@@ -5,13 +5,12 @@ import java.util.*;
 import lifesim.Object;
 public class Main extends PApplet
 {
-	
+	ArrayList<Herbivore> herbivores = new ArrayList<Herbivore>();
+	ArrayList<Carnivore> carnivores = new ArrayList<Carnivore>();
+	ArrayList<Object> objects = new ArrayList<Object>();
 	public static void main(String[] args) 
 	{
 		PApplet.main(new String[] { "--present", "Main" });
-		ArrayList<Herbivore> herbivores = new ArrayList<Herbivore>();
-		ArrayList<Carnivore> carnivores = new ArrayList<Carnivore>();
-		ArrayList<Object> Objects = new ArrayList<Object>();
 
 	}
 	
@@ -31,7 +30,7 @@ public class Main extends PApplet
 	public void draw() 
 	{
 		
-		if (frameCount % 90 == 0)
+		if (frameCount % 30 == 0)
 			  {
 				herbivore.hposx = (int)random(1300);
 				herbivore.hposy = (int)random(800);
@@ -40,6 +39,9 @@ public class Main extends PApplet
 				bacteria.render();
 				if(bacteria.herbCount < 100)
 				{
+					Herbivore herb = null;
+					herb = new Herbivore(this);
+					herbivores.add(herb);
 					herbivore.drawHerb();
 					bacteria.herbCount++;
 				}
